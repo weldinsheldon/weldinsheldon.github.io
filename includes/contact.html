@@ -1,0 +1,20 @@
+<div class="parallax-window full-page last-page"  data-parallax="scroll" data-image-src="" ng-controller="navCtrl">
+  <div id="contact-page" class="full-page content-page">
+    <div class="page-title">Contact</div>
+    <div class="page-quote">
+      "You want to know why we have doctors and lawyers? Because they can’t weld."
+      <br>
+      Unknown
+    </div>
+
+    <div class="separator"></div>
+
+    <div class="contact-wrapper">
+      <span ng-repeat="link in extLinks">
+        <a ng-href="{{link.url}}">
+          <img ng-src="{{link.img}}" width="100px" height="100px" onmouseover="imgSwap(this)" onmouseout="imgSwap(this)">
+        </a>
+      </span>
+    </div>
+  </div>
+</div>

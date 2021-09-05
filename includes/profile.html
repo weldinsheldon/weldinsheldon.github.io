@@ -1,0 +1,39 @@
+<div class="content-window"  ng-controller="profileCtrl">
+  <div id="profile-page" class="page content-page">
+    <div class="page-title">Profile</div>
+    <div class="page-quote">Quality welds since 2017</div>
+
+    <div class="separator"></div>
+
+    <div id="profile-page-section-wrapper" class="page-section-wrapper">
+
+      <div class="profile-section-left">
+        <div class="profile-section-title">About me</div>
+        <div class="profile-subsection">
+          <div class="profile-information">
+            My name is Sheldon; I like weldin'. Currently a welder at Hess Services but plan to be independent soon.
+          </div>
+        </div>
+      </div>
+
+      <div class="circle-pic"><img src="images/sheldon-farmer.jpg" width="200" height="200"></div>
+
+      <div class="profile-section-right">
+        <div class="profile-section-title">Details</div>
+        <div class="profile-subsection">
+          <div class="profile-subsection-title">Name</div>
+          <div class="profile-information"> {{ profile.firstName + ' ' + profile.lastName }} </div>
+        </div>
+        <div class="profile-subsection">
+          <div class="profile-subsection-title">Age</div>
+          <div class="profile-information"> {{ profile.age }} </div>
+        </div>
+        <div class="profile-subsection">
+          <div class="profile-subsection-title">Location</div>
+          <div class="profile-information"> {{ profile.city + ', ' + profile.state }} </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

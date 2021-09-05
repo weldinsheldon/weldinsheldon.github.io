@@ -1,0 +1,495 @@
+@charset "UTF-8";
+
+/*
+ * Colors
+ *     #22a39f = Green
+ *     #2ee4b7 = Highlighting Green
+ *     #38bbff = Blue
+ *     #a32839 = Red
+ *     #ff2c48 = Highlighting Red
+ *     #000, #333, #555, #cdcdcd, #efefef, #fff = Black to White
+ *
+ * Fonts
+ *     Lato = 100, 300
+ *     Open Sans = 300, 400
+ *     futura-pt
+ */
+
+@font-face {
+  /* Navigation links */
+  /* 136KB */
+  font-family: futura-pt;
+  src: url(../fonts/futura-pt.ttf);
+}
+
+/*========== SCROLL BARS ==========*/
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+  overflow: auto;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #cdcdcd;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #555;
+}
+
+/*======== END SCROLL BARS ========*/
+
+/*============ GLOBALS ============*/
+
+html {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+.hide {
+  display: none;
+}
+
+.no-select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+div.content-window {
+  background-color: #efefef;
+}
+
+div.full-page {
+  height: 100vh;
+}
+
+div.page {
+  min-height: 50vh;
+}
+
+div.content-page {
+  width: 50vw;
+  min-width: 600px;
+  margin: 0 auto;
+  padding: 50px 0;
+  background-color: #efefef;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  color: #333;
+}
+
+div.page-title {
+  margin-bottom: 10px;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 35px;
+  color: #a32839;
+}
+
+div.page-quote {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+div.separator {
+  width: 100%;
+  height: 1px;
+  background-color: #cdcdcd;
+}
+
+div.page-section-wrapper {
+  margin: 25px 0;
+  width: 100%;
+}
+
+div.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*========== END GLOBALS ==========*/
+
+
+
+/*========== NAVIGATION ==========*/
+
+div#home-page {
+  background-image: url("../images/bg_rods.jpg");
+}
+
+nav {
+  display: block;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(20, 20, 20, .3);
+}
+
+ul#logo {
+  display: inline-block;
+  list-style-type: none;
+  margin: 0 0 0 20%;
+  padding: 0;
+  width: 6%;
+  text-align: center;
+}
+
+ul#logo:hover {
+  background-color: #333;
+  transition: background-color 0.2s linear;
+}
+
+ul#logo li {
+  padding: 5px 0px;
+}
+
+ul#logo:hover > ul#icons {
+  visibility: visible;
+  opacity: 1;
+  background-color: #333;
+  transition: opacity 0.2s linear;
+}
+
+
+ul#logo li {
+  height: 40px;
+}
+
+ul#logo li img {
+  padding: 5px;
+}
+
+ul#icons {
+  list-style-type: none;
+  position: absolute;
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  margin: 0 0 10px 0;
+  padding: 0;
+  width: 6%;
+  transition: opacity 0.2s linear;
+}
+
+ul#nav-links {
+  display: inline-block;
+  margin: 0;
+  padding: 10px 0;
+  width: 44%;
+  height: 30px;
+  text-align: center;
+  vertical-align: top;
+}
+
+ul#nav-links li {
+  display: inline-block;
+  margin: 0 10px;
+  height: 100%;
+}
+
+ul#nav-links li a {
+  height: 100%;
+  font-size: 20px;
+  font-family: futura-pt;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 3px;
+  transition: color 0.2s linear;
+  padding: 15px 10px;
+}
+
+ul#nav-links li a:hover {
+  background-color: #333;
+  color: #a32839;
+  transition: background-color 0.2s linear;
+}
+
+div#page-scroller {
+  background-color: #333;
+  padding: 10px 8px;
+  display: inline-block;
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  width: 100px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: futura-pt;
+  font-size: 20px;
+  color: #a32839;
+}
+
+div#current-page{
+  color: #ff2c48;
+}
+
+div.page-arrow:hover {
+  transition: color 0.2s linear;
+  color: #ff2c48;
+  cursor: pointer;
+}
+
+div#name {
+  background-color: #333;
+  text-align: center;
+  margin: 25vh auto;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  font-size: 400%;
+  color: #efefef;
+  text-transform: uppercase;
+  letter-spacing: 3vw;
+  width: auto
+}
+
+span#first-name {
+  color: #ff2c48;
+}
+
+
+/*======== END NAVIGATION ========*/
+
+/*========= PROFILE PAGE =========*/
+
+div#profile-page-section-wrapper {
+  text-align: center;
+  position: relative;
+}
+
+div.profile-section-left, div.circle-pic, div.profile-section-right {
+  display: inline-block;
+  vertical-align: top;
+}
+
+div.profile-section-left, div.profile-section-right {
+  width: 30%;
+  min-height: 215px;
+  position: absolute;
+}
+
+div.profile-section-left {
+  text-align: left;
+  left: 0;
+}
+
+div.profile-section-right {
+  text-align: right;
+  right: 0;
+}
+
+div.profile-section-title {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  color: #a32839;
+}
+
+div.profile-subsection {
+  margin: 10px 0;
+}
+
+div.profile-subsection-title {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 25px;
+  color: #333;
+}
+
+div.profile-information {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+}
+
+div.circle-pic {
+  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+  border: solid 10px #cdcdcd;
+  border-radius: 115px;
+  overflow: hidden;
+}
+
+/*========== END PROFILE ==========*/
+
+/*=========== MOTTO PAGE ===========*/
+
+div#motto-page {
+  background-image: url("../images/bg_pipes.jpg");
+}
+
+div.banner-word {
+  height: 12.5vh;
+  font-family: 'Lato', sans-serif;
+  font-size: 250%;
+  color: #efefef;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 12.5vh;
+  vertical-align: middle;
+}
+
+div.banner-word:first-child {
+  padding-left: 2vw;
+}
+
+div.banner-word:nth-child(2) {
+  padding-left: 28vw;
+}
+
+div.banner-word:nth-child(3) {
+  padding-right: 28vw;
+  text-align: right
+}
+
+div.banner-word:nth-child(4) {
+  padding-right: 2vw;
+  text-align: right;
+}
+
+/*========= END MOTTO PAGE =========*/
+
+/*========== WELDS PAGE ==========*/
+
+div.welds-section-title {
+  text-align: left;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: #a32839;
+  margin-bottom: 15px;
+}
+
+div#photo-gallery {
+  width: auto;
+  overflow: hidden;
+  margin: 25px 0;
+  padding: 0;
+  background-color: #efefef;
+}
+
+div.photo-film {
+  /**
+  height: 233px;
+  width: 3550px;
+  */
+  height: 540px;
+  width: 3550px;
+}
+ 
+div.photo-film img:hover {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  cursor: pointer;
+  -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+/** Automations */
+img.photo-first {
+  -webkit-animation: bannermove 30s linear infinite;
+     -moz-animation: bannermove 30s linear infinite;
+      -ms-animation: bannermove 30s linear infinite;
+       -o-animation: bannermove 30s linear infinite;
+          animation: bannermove 30s linear infinite;
+}
+
+@keyframes bannermove {
+  0% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: -2125px;
+  }
+}
+
+ @-moz-keyframes bannermove {
+  0% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: -2125px;
+  }
+}
+
+ @-webkit-keyframes bannermove {
+  0% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: -2125px;
+  }
+}
+
+ @-ms-keyframes bannermove {
+  0% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: -2125px;
+  }
+}
+
+ @-o-keyframes bannermove {
+  0% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: -2125px;
+  }
+}
+
+/*======== END WELDS PAGE ========*/
+
+/*========= CONTACT PAGE =========*/
+
+div.last-page {
+  background-color: #333;
+}
+
+div#contact-page {
+  background-color: #333;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  color: #fff;
+  height: auto;
+}
+
+div.contact-wrapper {
+  text-align: center;
+  margin: 10px 0;
+}
+
+div.contact-wrapper span {
+  width: 50%;
+  display: inline-block;
+  text-align: center;
+}
+
+/*======= END CONTACT PAGE =======*/

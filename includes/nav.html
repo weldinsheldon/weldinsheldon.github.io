@@ -1,0 +1,32 @@
+<div id="home-page" class="full-page parallax">
+  <nav>
+    <ul id="logo">
+      <li>
+        <img src="images/contact.png" width="30px" height="30px">
+      </li>
+      <ul id="icons" ng-controller="navCtrl">
+        <li ng-repeat="link in extLinks">
+          <a ng-href="{{ link.url }}">
+            <img ng-src="{{ link.img }}" width="30px" height="30px" onmouseover="imgSwap(this)" onmouseout="imgSwap(this)">
+          </a>
+        </li>
+      </ul>
+    </ul>
+  
+    <ul id="nav-links" ng-controller="navCtrl">
+      <li ng-repeat="page in pages | limitTo:pages.length:1">
+        <a href="#" ng-click="scrollToPage($index + 1)" class="no-select">{{ page.page }}</a>
+      </li>
+    </ul>
+  </nav>
+  
+  <div id="page-scroller" class="no-select">
+    <div class="page-arrow" onclick="movePage('up')">&#9650;</div>
+    <div id="current-page">Home</div>
+    <div class="page-arrow" onclick="movePage('down')">&#9660;</div>
+  </div>
+  
+  <div id="name" ng-controller="profileCtrl">
+    <span id="first-name">{{ profile.firstName }}</span>{{ profile.lastName }}
+  </div>
+</div>

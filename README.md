@@ -1,2 +1,2 @@
 # weldinsheldon.github.io
-View my welds.
+My name is Sheldon; I like weldin'. Checkout my [welds](https://weldinsheldon.github.io/)!
