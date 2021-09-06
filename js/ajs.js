@@ -21,9 +21,9 @@ var app = angular.module("pageRunner", [])
                     ];
 
                     var extLinks = [
-                      { url : "mailto:d.tomlin@hotmail.com?Subject=Website",
+                      { url : "mailto:sheldonleshore09@gmail.com?Subject=Welding",
                         img : "images/v_email_white.png" },
-                      { url : "https://www.facebook.com/sheldon.leshore",
+                      { url : "https://www.facebook.com/sheldon.leshore.5",
                         img : "images/v_facebook_white.png" },
                       /** LinkedIn+ contact info
                       { url : "https://www.linkedin.com/in/",

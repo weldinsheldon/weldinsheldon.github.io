@@ -142,7 +142,7 @@ nav {
   width: 100vw;
   margin: 0;
   padding: 0;
-  background-color: rgba(20, 20, 20, .3);
+  background-color: rgba(20, 20, 20, .5);
 }
 
 ul#logo {
@@ -221,7 +221,7 @@ ul#nav-links li a {
 
 ul#nav-links li a:hover {
   background-color: #333;
-  color: #a32839;
+  color: #ff2c48;
   transition: background-color 0.2s linear;
 }
 
@@ -390,12 +390,10 @@ div#photo-gallery {
 }
 
 div.photo-film {
-  /**
-  height: 233px;
-  width: 3550px;
-  */
   height: 540px;
-  width: 3550px;
+  width: 2700px; /* 540px per photo * number of photos */
+  margin: 0;
+  padding: 0;
 }
  
 div.photo-film img:hover {
@@ -424,7 +422,7 @@ img.photo-first {
     margin-left: 0px;
   }
   100% {
-    margin-left: -2125px;
+    margin-left: -1700px; /* div.photo-film -> width - div#photo-gallery -> width */
   }
 }
 
@@ -433,7 +431,7 @@ img.photo-first {
     margin-left: 0px;
   }
   100% {
-    margin-left: -2125px;
+    margin-left: -1700px;
   }
 }
 
@@ -442,7 +440,7 @@ img.photo-first {
     margin-left: 0px;
   }
   100% {
-    margin-left: -2125px;
+    margin-left: -1700px;
   }
 }
 
@@ -451,7 +449,7 @@ img.photo-first {
     margin-left: 0px;
   }
   100% {
-    margin-left: -2125px;
+    margin-left: -1700px;
   }
 }
 
@@ -460,7 +458,7 @@ img.photo-first {
     margin-left: 0px;
   }
   100% {
-    margin-left: -2125px;
+    margin-left: -1700px;
   }
 }
 
